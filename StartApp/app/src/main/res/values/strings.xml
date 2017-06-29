@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">StartApp</string>
+
+    <string name="lbl_login">Login</string>
+    <string name="lbl_password">Senha</string>
+    <string name="btn_logar">Logar</string>
+    <string name="btn_exit">Sair</string>
 </resources>

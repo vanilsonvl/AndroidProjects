@@ -7,4 +7,7 @@
     <color name="white">#FFFFFF</color>
     <color name="blue">#0015ff</color>
     <color name="primary">#FF4C57D4</color>
+    <color name="primary_error">#FF4081</color>
+    <color name="primary_success">#2ae4d8</color>]
+    <color name="primary_alert">#e76215</color>
 </resources>

@@ -14,4 +14,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!" />
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:text="Enviar"
+        android:background="@color/colorAccent"
+        android:textColor="@color/white"
+        android:id="@+id/btnEnviar"
+        />
 </RelativeLayout>
