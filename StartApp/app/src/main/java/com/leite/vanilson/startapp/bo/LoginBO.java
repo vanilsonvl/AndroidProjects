@@ -1,9 +1,12 @@
 package com.leite.vanilson.startapp.bo;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 
 import com.leite.vanilson.startapp.LoginActivity;
+import com.leite.vanilson.startapp.repository.LoginRepository;
 import com.leite.vanilson.startapp.util.Util;
 import com.leite.vanilson.startapp.validation.ValidationLogin;
 
@@ -12,6 +15,13 @@ import com.leite.vanilson.startapp.validation.ValidationLogin;
  */
 
 public class LoginBO {
+
+    private LoginRepository loginRepository;
+
+    public LoginBO(Activity activity) {
+        loginRepository = new LoginRepository(activity);
+        loginRepository.listLogins(activity);
+    }
 
     public boolean validateFields(ValidationLogin validationLogin){
         boolean result = true;
@@ -28,6 +38,7 @@ public class LoginBO {
             result = false;
         }
         if(result) {
+            loginRepository.deleteLogin(validationLogin.getLogin(), validationLogin.getPassword());
             SharedPreferences.Editor editor = validationLogin.getActivity().getSharedPreferences("pref",Context.MODE_PRIVATE).edit();
             editor.putString("login", validationLogin.getLogin());
             editor.putString("password", validationLogin.getPassword());
@@ -35,5 +46,4 @@ public class LoginBO {
         }
         return result;
     }
-
 }

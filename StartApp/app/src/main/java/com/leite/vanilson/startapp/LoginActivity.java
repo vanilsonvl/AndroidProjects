@@ -24,12 +24,10 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         preferences = getSharedPreferences("pref", Context.MODE_PRIVATE);
         String login = preferences.getString("login", null);
         String password = preferences.getString("password", null);
-        loginBO = new LoginBO();
-
+        loginBO = new LoginBO(this);
         if(login != null && password != null){
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
@@ -38,7 +36,6 @@ public class LoginActivity extends AppCompatActivity {
         edtLogin = (EditText) findViewById(R.id.edt_login);
         edtPassword = (EditText) findViewById(R.id.edt_password);
         btnLogin = (Button) findViewById(R.id.btnLogin);
-
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,7 +47,6 @@ public class LoginActivity extends AppCompatActivity {
                 validationLogin.setPassword(password);
                 validationLogin.setEdtLogin(edtLogin);
                 validationLogin.setEdtPassword(edtPassword);
-
                 boolean isValidLogin = loginBO.validateFields(validationLogin);
                 if(isValidLogin){
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
@@ -59,8 +55,5 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
-
-
 }
