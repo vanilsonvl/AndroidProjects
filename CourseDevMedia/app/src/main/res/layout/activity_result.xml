@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="100px"
+    tools:context="br.com.vanilson.coursedevmedia.Result">
+    <TableRow android:gravity="center_horizontal">
+        <ImageView
+            android:layout_height="300px"
+            android:layout_width="300px"
+            android:id="@+id/imgSign"
+            android:src="@drawable/aries"/>
+    </TableRow>
+    <TableRow android:gravity="center_horizontal">
+        <TextView
+            android:text="Aries"
+            android:id="@+id/textSign"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1"/>
+    </TableRow>
+    <TableRow android:gravity="center_horizontal">
+        <TextView
+            android:text="Aries"
+            android:id="@+id/textDate"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1"/>
+    </TableRow>
+    <TableRow android:gravity="center_horizontal">
+        <Button
+            android:text="Voltar"
+            android:id="@+id/buttonBack"/>
+    </TableRow>
+</TableLayout>
