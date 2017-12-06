@@ -49,7 +49,7 @@ public class LoginRepository extends SQLiteOpenHelper {
         while (cursor.moveToNext()) {
             txt = "Id " + String.valueOf(cursor.getInt(cursor.getColumnIndex("id_login")));
         }
-        Util.showMsgToast(activity, txt);
+//        Util.showMsgToast(activity, txt);
     }
 
     public void addLogin(String login, String password) {

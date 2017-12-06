@@ -1,4 +1,4 @@
-package com.leite.vanilson.startapp;
+package com.leite.vanilson.startapp.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.leite.vanilson.startapp.R;
 import com.leite.vanilson.startapp.util.TypeMsg;
 import com.leite.vanilson.startapp.util.Util;
 

@@ -1,4 +1,4 @@
-package com.leite.vanilson.startapp;
+package com.leite.vanilson.startapp.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.leite.vanilson.startapp.R;
 import com.leite.vanilson.startapp.bo.LoginBO;
 import com.leite.vanilson.startapp.validation.ValidationLogin;
 
@@ -29,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
         String password = preferences.getString("password", null);
         loginBO = new LoginBO(this);
         if(login != null && password != null){
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            Intent intent = new Intent(LoginActivity.this, PersonActivity.class);
             startActivity(intent);
             finish();
         }
@@ -49,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
                 validationLogin.setEdtPassword(edtPassword);
                 boolean isValidLogin = loginBO.validateFields(validationLogin);
                 if(isValidLogin){
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, PersonActivity.class);
                     startActivity(intent);
                     finish();
                 }

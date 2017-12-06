@@ -3,9 +3,7 @@ package com.leite.vanilson.startapp.bo;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.content.pm.ActivityInfo;
 
-import com.leite.vanilson.startapp.LoginActivity;
 import com.leite.vanilson.startapp.repository.LoginRepository;
 import com.leite.vanilson.startapp.util.Util;
 import com.leite.vanilson.startapp.validation.ValidationLogin;

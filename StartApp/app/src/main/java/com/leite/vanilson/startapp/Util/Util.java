@@ -26,7 +26,6 @@ public class Util {
         TextView txtToast = (TextView) layoutToast.findViewById(R.id.txtToast);
         txtToast.setText(message);
 
-
 //        Toast toast = Toast.makeText(this, "Primeiro Toast", Toast.LENGTH_LONG);
         Toast toast = new Toast(activity);
         toast.setView(layoutToast);

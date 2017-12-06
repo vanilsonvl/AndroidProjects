@@ -5,4 +5,5 @@
 
     <dimen name="margin_left_15">15dp</dimen>
     <dimen name="padding_15">15dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
 </resources>

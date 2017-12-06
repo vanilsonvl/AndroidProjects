@@ -9,8 +9,15 @@
         <item name="android:alertDialogTheme">@style/AppTheme.Dark.Dialog.Info</item>
     </style>
 
-    <style name="Txt_login">
+    <style name="txt_login">
         <item name="android:textSize">18dp</item>
+        <item name="android:textColor">@color/primary</item>
+    </style>
+
+    <style name="txt_label">
+        <item name="android:textSize">20dp</item>
+        <item name="android:layout_marginBottom">@dimen/padding_10</item>
+        <item name="android:layout_marginTop">@dimen/padding_10</item>
         <item name="android:textColor">@color/primary</item>
     </style>
 
