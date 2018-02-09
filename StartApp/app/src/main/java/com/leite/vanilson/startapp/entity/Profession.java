@@ -13,4 +13,13 @@ public enum Profession {
     public String getDescription() {
         return this.description;
     }
+
+    public static Profession getProfession(int position) {
+        for (Profession p: Profession.values()) {
+            if (p.ordinal() == position) {
+                return p;
+            }
+        }
+        return null;
+    }
 }
